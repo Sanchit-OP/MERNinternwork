@@ -1,0 +1,43 @@
+<html>
+   
+   <head>
+      <title>JavaScript Animation</title>
+      
+      <script type="text/javascript">
+         <!--
+            var img = null;
+            var animate ;
+            
+            function init(){
+               img = document.getElementById('myImage');
+               img.style.position= 'relative'; 
+               img.style.left = '0px'; 
+            }
+            
+            function moveRight(){
+               img.style.left = parseInt(img.style.left) + 10 + 'px';
+               animate = setTimeout(moveRight,20); // call moveRight in 20msec
+            }
+            
+            function stop(){
+               clearTimeout(animate);
+               img.style.left = '0px'; 
+            }
+            
+            window.onload =init;
+         //-->
+      </script>
+      
+   </head>
+   
+   <body>
+   
+      <form>
+         <img id="myImage" src="desert.png" height="400" width="600" />
+         <p>Click the buttons below to handle animation</p>
+         <input type="button" value="Start" onclick="moveRight();" />
+         <input type="button" value="Stop" onclick="stop();" />
+      </form>
+      
+   </body>
+</html>
